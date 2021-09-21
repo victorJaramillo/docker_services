@@ -1,0 +1,1 @@
+docker load < s3backup.tar

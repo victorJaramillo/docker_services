@@ -1,0 +1,11 @@
+version: "3.4"
+services: 
+    posteio:
+        image: analogic/poste.io
+        restart: always
+        network_mode: "host"
+        container_name: "mail-server"
+        volumes:
+            - /root/mail-data/:/data
+        environment: 
+            - HTTPS=ON

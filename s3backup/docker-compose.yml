@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  minio:
+    image: 's3backup'
+    restart: always
+    ports:
+      - '80:9000'
+    environment:
+      - MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE
+      - MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+    volumes:
+      - '/Users/victor/s3backup/s3data/_data:/data'
